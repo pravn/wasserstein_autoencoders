@@ -3,6 +3,11 @@ Implementation of Wasserstein Autoencoders
 
 From the paper - "Wasserstein Auto-Encoders": https://arxiv.org/abs/1711.01558
 
+## Dataset 
+LSUN bedrooms. Download with these instructions:
+https://github.com/igul222/improved_wgan_training/issues/57
+
+
 ## Loss functions
 ### Discriminator 
 The adversarial game is played between latent space terms. The 'real' z is the standard normal distribution. The 'fake' is the latent code produced by the WAE. We concoct terms accordingly. 
