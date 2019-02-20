@@ -3,11 +3,16 @@ Implementation of Wasserstein Autoencoders
 
 From the paper - "Wasserstein Auto-Encoders": https://arxiv.org/abs/1711.01558
 
-## Loss functions
-###Discriminator 
-The adversarial game is played between latent space terms. The 'real' z is the standard zero mean unit variance gaussian. The 'fake' is the latent code produced by the WAE. We concoct terms accordingly. 
+## Dataset 
+LSUN bedrooms. Download with these instructions:
+https://github.com/igul222/improved_wgan_training/issues/57
 
-###Generator 
+
+## Loss functions
+### Discriminator 
+The adversarial game is played between latent space terms. The 'real' z is the standard normal distribution. The 'fake' is the latent code produced by the WAE. We concoct terms accordingly. 
+
+### Generator 
 There are two terms, one coming from reconstruction, and the other is the adversarial regularization term (which must now be matched adversarially to a zero mean unit variance gaussian). 
 
 
