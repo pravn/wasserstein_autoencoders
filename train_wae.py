@@ -111,7 +111,7 @@ def run_trainer(train_loader, net_WAE, netD, args):
             errD_real.backward()
             
             optimizerD.step()
-            D_scheduler.step()
+            #D_scheduler.step()
 
             #train netE, netG
             for p in netD.parameters():
@@ -146,7 +146,7 @@ def run_trainer(train_loader, net_WAE, netD, args):
                 torch.save(netD, './D_model.pt')
                 
                 print('%d [%d/%d] Loss_D (real/fake) [%.4f/%.4f] Loss WAE (recon/adv) [%.4f/%.4f]'%
-                      (epoch, i, len(train_loader), errD_real.item(), errD_fake.item(), 
+                      (epoch, i, len(train_loader), errD_real, errD_fake, 
                        recon_loss, adv_loss))
 
 
